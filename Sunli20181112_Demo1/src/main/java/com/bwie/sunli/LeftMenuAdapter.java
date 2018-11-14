@@ -1,7 +1,6 @@
-package com.bwie.sunli.adapter;
+package com.bwie.sunli;
 
 import android.content.Context;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,14 +8,15 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bwie.sunli.R;
+public class LeftMenuAdapter extends BaseAdapter {
 
-public class LeftFragmentAdapter extends BaseAdapter {
+    private String[] menus = new String[]{
+            "首页", "视频", "我的"
+    };
 
-    private String[] menus = new String[]{"首页", "视频", "我的"};
     private Context context;
 
-    public LeftFragmentAdapter(Context context) {
+    public LeftMenuAdapter(Context context) {
         this.context = context;
     }
 
@@ -25,17 +25,18 @@ public class LeftFragmentAdapter extends BaseAdapter {
         return menus.length + 1;
     }
 
+    private final int ITEM_COUNT = 2;
     private final int IMAGE_TYPE = 0;
     private final int TEXT_TYPE = 1;
 
     @Override
     public int getItemViewType(int position) {
-        return position == IMAGE_TYPE ? IMAGE_TYPE : TEXT_TYPE;
+        return position == 0 ? IMAGE_TYPE : TEXT_TYPE;
     }
 
     @Override
     public String getItem(int position) {
-        if (position == IMAGE_TYPE) {
+        if (position == 0) {
             return null;
         }
         return menus[position - 1];
@@ -49,32 +50,36 @@ public class LeftFragmentAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
-
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(
-                    getItemViewType(position) == IMAGE_TYPE ? R.layout.menu_image_item : R.layout.menu_text_item, parent, false);
-            holder = new ViewHolder();
-
-            holder.text = convertView.findViewById(R.id.text);
-            holder.icon = convertView.findViewById(R.id.icon);
-
-            convertView.setTag(this);
+            convertView = LayoutInflater.from(context)
+                    .inflate(getItemViewType(position) == IMAGE_TYPE ? R.layout.menu_image_item : R.layout.menu_text_item,
+                            parent, false);
+            holder = new ViewHolder(convertView);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
         if (getItemViewType(position) == TEXT_TYPE) {
-            holder.text = convertView.findViewById(R.id.text);
-            holder.icon = convertView.findViewById(R.id.icon);
-            holder.text.setText(getItem(position));
+            holder.bindData(getItem(position));
         }
-
         return convertView;
     }
 
     class ViewHolder {
-        TextView text;
-        ImageView icon;
+        ImageView imageView;
+        TextView textView;
+        public ViewHolder(View itemView) {
+            imageView = itemView.findViewById(R.id.icon);
+            textView = itemView.findViewById(R.id.text);
+            itemView.setTag(this);
+        }
 
+        public void bindData(String text) {
+            textView.setText(text);
+        }
+
+        public void displayIcon() {
+
+        }
     }
 }
