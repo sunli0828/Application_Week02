@@ -9,11 +9,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Snuli20181112_Demo2" />
-            <option value="$PROJECT_DIR$/Sunli20181112_Demo1" />
-            <option value="$PROJECT_DIR$/Sunli20181112_ZK2" />
-            <option value="$PROJECT_DIR$/Sunli20181113" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/drawer_tab_xlsitview" />
+            <option value="$PROJECT_DIR$/general_demo1" />
+            <option value="$PROJECT_DIR$/pulltorefresh" />
             <option value="$PROJECT_DIR$/xListView" />
           </set>
         </option>

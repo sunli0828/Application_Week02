@@ -1,2 +1,3 @@
-include ':app', ':Sunli20181112_ZK2', ':Sunli20181112_Demo1', ':Sunli20181113', ':Snuli20181112_Demo2', ':drawer_tab_xlsitview'
+include ':app', ':Snuli20181112_Demo2', ':drawer_tab_xlsitview', ':general_demo1'
 include ':xListView'
+include ':pulltorefresh'
