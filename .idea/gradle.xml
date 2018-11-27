@@ -8,11 +8,13 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Snuli20181112_Demo2" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/drawer_tab_xlsitview" />
-            <option value="$PROJECT_DIR$/general_demo1" />
+            <option value="$PROJECT_DIR$/compostive" />
             <option value="$PROJECT_DIR$/pulltorefresh" />
+            <option value="$PROJECT_DIR$/sunli20181121" />
+            <option value="$PROJECT_DIR$/sunli20181122" />
+            <option value="$PROJECT_DIR$/sunli20181123" />
+            <option value="$PROJECT_DIR$/sunli20181127" />
             <option value="$PROJECT_DIR$/xListView" />
           </set>
         </option>
