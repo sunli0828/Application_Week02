@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.youth.banner.Banner
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/banner_image"
+        app:indicator_width="8dp"
+        app:indicator_height="8dp"
+        app:indicator_drawable_selected="@drawable/shape_selected"
+        app:indicator_drawable_unselected="@drawable/shape_normal"
+        ></com.youth.banner.Banner>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner_image"
+        android:textSize="24sp"
+        android:id="@+id/text_name"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_name"
+        android:textSize="24sp"
+        android:id="@+id/text_cost"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_cost"
+        android:textSize="24sp"
+        android:id="@+id/text_now"
+        />
+
+</android.support.constraint.ConstraintLayout>
